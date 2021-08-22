@@ -1,0 +1,9 @@
+.categories-list {
+	margin: 10px;
+	width: 100%;
+}
+
+.categories-list select {
+	padding: 10px;
+	width: 100%;
+}

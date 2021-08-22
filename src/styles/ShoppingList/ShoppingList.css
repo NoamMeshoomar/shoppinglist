@@ -1,0 +1,25 @@
+.shopping-list {
+	padding: 20px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 10px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.shopping-list .cart-products {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.shopping-list .cart-products .cart-product {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

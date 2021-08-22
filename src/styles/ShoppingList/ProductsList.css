@@ -1,0 +1,27 @@
+.products-list {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 20px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.products-list .product {
+	transition: transform .3s ease;
+	cursor: pointer;
+}
+
+.products-list .product:hover {
+	transform: scale(1.1);
+}
+
+.products-list .product img {
+	width: 70px;
+	height: 70px;
+}
+
+.products-list .product p {
+	font-size: 12px;
+}
