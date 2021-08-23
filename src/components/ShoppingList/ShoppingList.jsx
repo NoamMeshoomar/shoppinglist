@@ -15,7 +15,7 @@ const ShoppingList = () => {
 	const handleChangeCategory = category => setCategory(category);
 	const handleSearch = searchText => setSearchText(searchText.toLowerCase());
 	const handleAddToCart = productToAdd => {
-		const productExist = cart.filter(product => product.id === productToAdd.id)[0];
+		const productExist = cart.find(product => product.id === productToAdd.id);
 
 		if(!productExist) {
 			setCart(prev => [...prev, { ...productToAdd, quantity: 1 }]);
