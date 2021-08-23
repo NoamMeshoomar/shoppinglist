@@ -27,8 +27,8 @@ const ShoppingList = () => {
 		}
 	}
 	const handleRemoveFromCart = productToRemove => {
-		const newCartArray = cart.filter(product => product.id !== productToRemove.id);
-		setCart(newCartArray);
+		const updatedCartArray = cart.filter(product => product.id !== productToRemove.id);
+		setCart(updatedCartArray);
 	}
 	const handleReset = () => setCart([]);
 
