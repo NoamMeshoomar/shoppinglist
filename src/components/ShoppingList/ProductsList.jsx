@@ -21,11 +21,13 @@ const ProductsList = ({ category, searchText, addToCart }) => {
 		}
 	}, [category, searchText]);
 
+	const addProductToCart = product => () => addToCart(product);
+
 	return(
 		<div className="products-list">
 			{ products.length > 0 ? products.map(product => {
 				return(
-					<div key={ product.id } className="product" onClick={ () => addToCart(product) }>
+					<div key={ product.id } className="product" onClick={ addProductToCart(product) }>
 						<img src={ product.image } alt="" />
 						<p>{ product.name }</p>
 					</div>
