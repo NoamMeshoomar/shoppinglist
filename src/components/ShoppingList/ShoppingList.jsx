@@ -13,7 +13,9 @@ const ShoppingList = () => {
 	const [cart, setCart] = useState([]);
 
 	const handleChangeCategory = category => setCategory(category);
+
 	const handleSearch = searchText => setSearchText(searchText.toLowerCase());
+
 	const handleAddToCart = productToAdd => {
 		const productExist = cart.find(product => product.id === productToAdd.id);
 
@@ -26,11 +28,14 @@ const ShoppingList = () => {
 			setCart(newCartArray);
 		}
 	}
+
 	const handleRemoveFromCart = productToRemove => {
-		const updatedCartArray = cart.filter(product => product.id !== productToRemove.id);
-		setCart(updatedCartArray);
+		setCart(cart.filter(product => product.id !== productToRemove.id));
 	}
+
 	const handleReset = () => setCart([]);
+	
+	const printCart = () => console.log(cart);
 
 	return(
 		<div className="shopping-list">
@@ -47,7 +52,7 @@ const ShoppingList = () => {
 			</div>
 			<div className="buttons" style={ { marginTop: 20 } }>
 				<button onClick={ handleReset }>Start Over</button>
-				<button onClick={ () => console.log(cart) }>Done</button>
+				<button onClick={ printCart }>Done</button>
 			</div>
 		</div>
 	)

@@ -9,15 +9,15 @@ const ProductsList = ({ category, searchText, addToCart }) => {
 
 	useEffect(() => {
 		// Filter the products to display by category
-		const filteredProducts = ProductsData.filter(product => product.category === category);
-		setProducts(filteredProducts);
+		setProducts(ProductsData.filter(product => product.category === category));
 		
 		// Filter products by search input text
 		if(searchText.length > 0) {
-			const searchedProducts = ProductsData.filter(product => {
-				return product.category === category && product.name.toLowerCase().includes(searchText)
-			});
-			setProducts(searchedProducts);
+			setProducts(
+				ProductsData.filter(product => {
+					return product.category === category && product.name.toLowerCase().includes(searchText)
+				})
+			);
 		}
 	}, [category, searchText]);
 
